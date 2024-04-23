@@ -1,0 +1,11 @@
+{
+	"ios": {
+		"name": "PicSound"
+	},
+	"android": {
+		"name": "PicSound"
+	},
+	"common": {
+		"name": "PicSound"
+	}
+}

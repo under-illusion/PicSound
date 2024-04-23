@@ -1,0 +1,91 @@
+.whole{
+  background-color: #fce9e9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* padding-bottom: 2000rpx; */
+}
+.disc{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 70%;
+  width: 100%;
+}
+.cover {
+  background-color: white;
+  border: 2px solid #999;
+  position: absolute;
+  top:5%;
+  left: 5%;
+  padding: 5%;
+  height: 60%;
+  width: 60%;
+}
+
+.disc-img {
+  height: 360px;
+  width: 360px;
+  top: 8%;
+  left: 20%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.song_txt{
+  top:52%;
+  left: 40rpx;
+  position: absolute;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.singer_txt{
+  top:59%;
+  left: 50rpx;
+  position: absolute;
+  font-size: 40rpx;
+}
+.purchaser_txt{
+  top:63%;
+  left: 40rpx;
+  position: absolute;
+  font-size: 50rpx;
+}
+
+.img_play{
+  top:80%;
+  position: absolute;
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.timebox{
+  top:70%;
+  width: 80%;
+  position: absolute;
+}
+
+.start_time{
+  top:75%;
+  left: 0%;
+  position: absolute;
+}
+.end_time{
+  top:75%;
+  position: absolute;
+  right: 0%;
+}
+
+.selected_txt{
+  position: absolute;
+  top: 65%;
+  right: 8%;
+  border-radius: 50rpx;
+}
+.button-hover{
+  background-color: rgb(248, 199, 199);
+  color: #fff;
+}

@@ -1,0 +1,18 @@
+<view class="whole">
+  <text class="title">My Story Gallery</text>
+
+  <view class="viewImage">
+    <image class="logo" src="../sources/s_phtot.png"> </image>
+    <view class="txt" bind:tap="jump">Standard single Photograph</view>
+  </view>
+
+  <view class="viewImage">
+    <image class="logo" src="../sources/wedding.png"></image>
+    <view class="txt">Wedding photos</view>
+  </view>
+
+  <view class="viewImage">
+    <image class="logo" src="../sources/muti.png"></image>
+    <view class="txt">Multi-photo collection</view>
+  </view>
+</view>

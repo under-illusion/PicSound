@@ -1,0 +1,29 @@
+<view class="whole">
+  <view class="disc">
+    <image class="disc-img" style="transform: rotateZ({{rotationAngle}}deg);" src="../sources/disc.png"></image>
+    <image class="cover" src="{{music_url}}"></image>
+  </view>
+
+    <view class="song_txt">{{musiclist.data.song_name}}</view>
+    <view class="singer_txt">{{musiclist.data.singer_name}}</view>
+    <view class="purchaser_txt">Purchaser {{Purchaser}}</view>
+
+    <block wx:if="{{is_selected}}">
+      <button class="selected_txt" bind:tap="select">select</button>
+    </block>
+    <block wx:else>
+      <button class="selected_txt" bind:tap="export">export</button>
+    </block>
+
+    <view class="timebox">
+      <view class="start_time">{{audioCurrent}}</view>
+      <slider block-size="20" backgroundColor="white" activeColor="red" value="{{audioPos}}" bindchange="handle_slider_change"></slider>
+      <view class="end_time">{{audioDuration}}</view>
+    </view>
+    <block wx:if="{{isplay}}">
+      <image class="img_play" src="../sources/pause.png" bind:tap="play"/>
+    </block>
+    <block wx:else>
+      <image class="img_play" src="../sources/play.png" bind:tap="play"/>
+    </block>
+</view>

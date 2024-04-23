@@ -1,0 +1,22 @@
+<view class="whole">
+  <view class="search_bar">
+      <view class="search_bar_txt">
+        <textarea name="keyword" placeholder="Pleace input the keyword of the song" auto-focus="true" bindinput="keywordInput"></textarea>
+      </view>
+      
+      <view class="search_bar_logo" bind:tap="searching">
+        <image class="search_bar_img" src="../sources/search.png"></image>
+      </view>
+  </view>
+
+    <block wx:for="{{musiclist}}"  wx:for-index="index" wx:key="index">
+      <view class="item">
+        <view class="txtbox">
+          <text class="mname">{{musiclist[index].song_name}}</text>
+          <text class="name">{{musiclist[index].singer_name}}</text>
+        </view>
+        <image class="playimg" src="../sources/play.png" bind:tap="jump_to_play" data-index="{{index}}"></image>
+      </view>
+    </block>
+    
+</view>

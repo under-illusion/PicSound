@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/ssp/ssp",
+    "pages/wp/wp",
+    "pages/mpc/mpc",
+    "pages/display/display",
+    "pages/music/music"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "PicSound"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Home",
+        "iconPath": "pages/sources/home1.png",
+        "selectedIconPath": "pages/sources/home2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "Me",
+        "iconPath": "pages/sources/me1.png",
+        "selectedIconPath": "pages/sources/me2.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+<view class="header">
+  <text class="title">DIY Your Photograph</text>
+</view>
+
+<swiper 
+    indicator-dots="true"
+    indicator-color="rgba(255, 255, 255, 0.5)"
+    indicator-active-color="rgba(255, 255, 255, 1)"
+    autoplay="true" 
+    interval="3000" 
+    duration="1000"
+    circular="true"
+    >
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </block>
+</swiper>
+
+<!-- <view class="title">Popular styles</view>
+<view class="hotlist">
+<block wx:for="{{sample}}" wx:key="*this">
+  <view class="item">
+    <image src="{{item}}"></image>
+  </view>
+</block>
+</view> -->
+
+<view class="box">
+  <view class="viewImage"  bind:tap="jump" data-index="ssp">
+    <image class="logo" src="../sources/s_phtot.png"> </image>
+    <view>Standard single Photograph</view>
+  </view>
+
+  <view class="viewImage" bind:tap="jump" data-index="wp">
+    <image class="logo" src="../sources/wedding.png"></image>
+    <view>Wedding photos</view>
+  </view>
+
+  <view class="viewImage" bind:tap="jump" data-index="mpc">
+    <image class="logo" src="../sources/muti.png"></image>
+    <view>Multi-photo collection</view>
+  </view>
+  
+  <view>{{message}}</view>
+  <button class="selected_txt" bind:tap="scan">scan</button>
+  <view>{{content}}</view>
+</view>
+

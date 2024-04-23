@@ -1,0 +1,36 @@
+.whole{
+  background-color: #fce9e9;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding-bottom: 800rpx;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  font-size: 80rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewImage{
+  display: flex;
+  flex-direction: row;
+  background-color:white;
+  margin: 20rpx;
+  border-radius: 20rpx;
+  border: 2px solid rgb(199, 198, 198);
+}
+
+.logo{
+  height: 150rpx;
+  width: 150rpx;
+  margin-right: 10px;
+  margin-left: 20rpx;
+}
+.txt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

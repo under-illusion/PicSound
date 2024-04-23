@@ -1,0 +1,62 @@
+<view class="box">
+    <view class="header">
+      <text class="title">Standard single Photograph</text>
+    </view>
+
+  <view class="container">
+    <block wx:if="{{imageUrl !== ''}}" wx:key="*this">
+        <image class="showImage" src="{{imageUrl}}" bind:tap="previewImg" bind:longpress="deleteImg"></image>
+    </block>
+    <block wx:else>"
+      <view class="showImage">
+        <view class="hint-text" bind:tap="chooseImage">{{hintText}}
+          <text class="symbol" decode="{{true}}">{{ imageUrl === '' ? '* &nbsp;': ''}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="box2">
+    <view class="line">
+      <text class="line_text" decode="{{true}}">Photo Size &nbsp;</text>
+      <text class="symbol" decode="{{true}}">* &nbsp;</text>
+      <view class="picker_bar">
+        <picker mode="selector" range="{{sizes}}" bindchange="bindPickerChange">
+          <view class="picker">
+            {{ selectedSizeIndex === -1 ? 'Pleace have a choice' : sizes[selectedSizeIndex] }}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="line">
+      <text class="line_text">Music</text>
+      <view class="picker_bar" bind:tap="musicChoose">
+        <view class="picker">
+        {{music_name === '' ? 'Pleace choose one song' : music_name}}
+        </view>
+      </view>
+    </view>
+    <view class="line">
+      <text class="line_text">Voice over</text>
+      <view class="picker_bar">
+        <textarea class="input" name="Voice_over" placeholder="Pleace write the words to tell" maxlength="-1" auto-focus="true"></textarea>
+      </view>
+    </view>
+    <view class="line">
+      <text class="line_text">Purchaser</text>
+      <view class="picker_bar">
+        <textarea class="input" name="Voice_over" placeholder="Pleace write the purchaser" auto-focus="true"></textarea>
+      </view>
+    </view>
+    <view class="line">
+      <text class="line_text">Remark</text>
+      <view class="picker_bar">
+        <textarea class="input" name="remark" placeholder="Pleace write your remark" auto-focus="true" bindinput="remarkInputAction"></textarea>
+      </view>
+    </view>
+  </view>
+
+  <button class="submit-button" bind:tap="button_upload">SUBMIT</button>
+  
+</view>
